@@ -1,0 +1,49 @@
+/* ----------------------------------------- */
+/* What we do Styles */
+/* ----------------------------------------- */
+#what-we-do {
+	text-align: center;
+	margin: 9.6rem 0;
+}
+
+#what-we-do h2 {
+	font-size: 3.2rem;
+	margin: 6.4rem 0 3.2rem;
+	font-weight: 500;
+}
+
+#what-we-do p {
+	line-height: 1.55;
+	font-size: 1.6rem;
+}
+
+#what-we-do h2 + p {
+	width: 60%;
+	margin: 0 auto 8rem;
+}
+
+#what-we-do .icons {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	align-content: center;
+	margin: 4.8rem 0;
+}
+
+#what-we-do .icons img {
+	width: 50px;
+	height: 50px;
+}
+
+#what-we-do .icons .card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+#what-we-do .icons .card:hover {
+	transform: translateY(-5px);
+}

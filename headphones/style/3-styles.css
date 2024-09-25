@@ -1,0 +1,40 @@
+/* ----------------------------------------- */
+/* Contact Styles */
+/* ----------------------------------------- */
+#contact {
+	width: 30%;
+	margin: 8rem auto 2.4rem;
+	text-align: center;
+}
+
+#contact h2 {
+	margin-bottom: 1.2rem;
+	font-size: 3.2rem;
+}
+
+#contact form fieldset {
+	border: none;
+	display: flex;
+	flex-direction: column;
+	gap: 2.4rem;
+	margin: 2.4rem 0;
+}
+
+#contact textarea,
+#contact input {
+	display: block;
+	padding: 0.8rem;
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid lightgray;
+}
+
+#contact textarea {
+	padding-bottom: 0px;
+	height: 3.4rem;
+}
+
+#contact button {
+	box-shadow: unset;
+	cursor: pointer;
+}

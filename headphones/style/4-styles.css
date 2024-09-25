@@ -1,0 +1,30 @@
+/* ----------------------------------------- */
+/* Footer Styles */
+/* ----------------------------------------- */
+footer {
+	background-color: var(--black-text-clr);
+	color: var(--white-text-clr);
+	padding: 6.4rem 0;
+}
+
+footer .container,
+footer ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	list-style: none;
+}
+
+footer ul {
+	gap: 1.2rem;
+}
+
+footer a {
+	color: currentColor;
+	font-size: 20px;
+	transition: all 0.3s ease-in-out;
+}
+
+footer a:hover {
+	color: var(--orange-cta-clr);
+}

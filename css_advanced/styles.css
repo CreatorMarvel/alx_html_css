@@ -1,0 +1,638 @@
+/* ----------------------------------------- */
+/* Global Styles */
+/* ----------------------------------------- */
+/* 
+- Font sizes (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+:root {
+	--purple-clr: #c271ff;
+	--pruple-clr-light: #af66e6;
+
+	--dark-clr: #071629;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Source Code Pro", system-ui;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	font-weight: 400;
+	color: #444;
+	position: relative;
+	transition: all 0.4s ease-in-out;
+	overflow-x: hidden;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+	isolation: isolate;
+}
+
+a {
+	text-decoration: none;
+}
+
+h2.heading-secondary {
+	margin-bottom: 3.2rem;
+	font-size: 2rem;
+	font-weight: normal;
+	text-align: center;
+
+	.purple-text {
+		color: var(--purple-clr);
+	}
+}
+
+.register {
+	background-color: var(--purple-clr);
+	border-radius: 50px;
+	border: none;
+	box-shadow: 0 0 24px 4px rgba(0, 0, 0, 0.4);
+	color: currentColor;
+	padding: 1.2rem 2.4rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1.2rem;
+	margin-top: 3.2rem;
+	cursor: pointer;
+	transition: all 0.4s ease-in-out;
+}
+
+.register:hover {
+	background-color: var(--pruple-clr-light);
+}
+
+.purple-text {
+	font-weight: 800;
+}
+
+/* ----------------------------------------- */
+/* Header Styles */
+/* ----------------------------------------- */
+header {
+	width: 80%;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	color: #fff;
+	padding: 1.6rem 2rem;
+	font-size: 1.6rem;
+
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		ul,
+		a {
+			display: flex;
+			align-items: center;
+			color: currentColor;
+			list-style: none;
+		}
+
+		a:not(a.link) {
+			gap: 1.6rem;
+			font-weight: 900;
+			letter-spacing: -0.5px;
+		}
+
+		ul {
+			gap: 4.8rem;
+			text-transform: uppercase;
+			font-weight: 600;
+
+			a {
+				font-size: 1.4rem;
+				transition: all 0.1s ease-in-out;
+				text-decoration: underline transparent;
+			}
+
+			a:hover {
+				text-decoration-color: var(--pruple-clr-light);
+				text-decoration-thickness: 3px;
+			}
+		}
+		.humburg-menu,
+		.cancel {
+			display: none;
+		}
+	}
+}
+
+/* ----------------------------------------- */
+/* Main Part Styles */
+/* ----------------------------------------- */
+section#main-part {
+	width: 100%;
+	height: 100vh;
+	background-image: url("./util/images/background.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	color: #fff;
+
+	h1 {
+		font-size: 7.4rem;
+		font-weight: 800;
+		text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+	}
+
+	p.faces {
+		text-transform: uppercase;
+		font-weight: 800;
+		font-size: 1.4rem;
+		letter-spacing: 0.5px;
+		display: flex;
+		justify-content: center;
+		gap: 4.8rem;
+	}
+
+	.register {
+		margin-bottom: 9.6rem;
+	}
+
+	.pro-section {
+		.pros {
+			display: flex;
+			align-items: center;
+			gap: 6.4rem;
+
+			.pro {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+
+				img {
+					margin-bottom: 1rem;
+					width: 100px;
+				}
+
+				figcaption {
+					h4.pro-heading {
+						font-size: 1.6rem;
+						margin-bottom: 0.2rem;
+					}
+
+					p.pro-text {
+						line-height: 1.5;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ----------------------------------------- */
+/* Quote Styles */
+/* ----------------------------------------- */
+section#quote-section {
+	background-color: var(--purple-clr);
+	padding: 6.4rem 0;
+	color: #fff;
+
+	.wrapper {
+		width: 60%;
+		margin: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 3.2rem;
+		font-size: 1.4rem;
+
+		img {
+			width: 100px;
+		}
+
+		.testimonial {
+			blockquote {
+				line-height: 1.5;
+				margin-bottom: 2.4rem;
+			}
+
+			h4.author {
+				font-weight: 800;
+			}
+		}
+	}
+}
+
+/* ----------------------------------------- */
+/* Tutorial Styles */
+/* ----------------------------------------- */
+section#tutorial-section {
+	padding: 6.4rem;
+
+	.tutorials {
+		width: 80%;
+		margin: auto;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: 1.2rem;
+
+		.tutorial {
+			max-width: 300px;
+
+			.preview {
+				overflow: hidden;
+				position: relative;
+
+				img {
+					transition: all 0.4s ease-in-out;
+					cursor: pointer;
+					width: 100%;
+				}
+
+				.play {
+					width: 50px;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+
+				&:hover .tutorial-preview {
+					transform: scale(1.1);
+				}
+			}
+
+			.container {
+				padding: 1.2rem;
+
+				.tutorial-heading {
+					margin-bottom: 0.8rem;
+					font-weight: 800;
+				}
+
+				.tutorial-text {
+					line-height: 1.5;
+					margin-bottom: 1.2rem;
+					font-weight: 700;
+					color: rgb(164, 169, 177);
+				}
+
+				.author-details {
+					display: flex;
+					align-items: center;
+					gap: 1.2rem;
+					margin-bottom: 1.2rem;
+
+					.tutorial-author-avatar {
+						width: 30px;
+					}
+
+					.tutorial-author-name {
+						color: var(--purple-clr);
+						font-size: 1.2rem;
+					}
+				}
+
+				.tutorial-rating {
+					display: flex;
+					justify-content: space-between;
+					color: var(--purple-clr);
+					font-size: 1.2rem;
+
+					.tutorial-lenght {
+						font-weight: 700;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ----------------------------------------- */
+/* Membership Styles */
+/* ----------------------------------------- */
+section#membership-section {
+	background-color: var(--dark-clr);
+	color: #fff;
+	padding: 6.4rem;
+	text-align: center;
+
+	.wrapper {
+		width: 80%;
+		margin: auto;
+	}
+
+	.memberships {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: 1.2rem;
+		margin-bottom: 6.4rem;
+
+		.membership {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			img,
+			.membership-title {
+				margin: 1.2rem;
+			}
+
+			.membership-title {
+				font-size: 1.6rem;
+				font-weight: 800;
+			}
+
+			.membership-text {
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+/* ----------------------------------------- */
+/* FAQ Styles */
+/* ----------------------------------------- */
+section#faq-section {
+	margin-bottom: 6.4rem;
+
+	.faq-title-section {
+		text-align: center;
+		margin: 6.4rem 0;
+		font-size: 3.6rem;
+		font-weight: 400;
+	}
+
+	.faqs {
+		width: 60%;
+		margin: auto;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: center;
+		column-gap: 12.8rem;
+		row-gap: 6.4rem;
+
+		.faq {
+			.faq-heading {
+				font-size: 1.8rem;
+				margin-bottom: 2rem;
+			}
+
+			.faq-text {
+				line-height: 1.6;
+				font-size: 1.4rem;
+				color: rgb(164, 169, 177);
+			}
+		}
+	}
+}
+
+/* ----------------------------------------- */
+/* Footer Styles */
+/* ----------------------------------------- */
+footer {
+	background-color: var(--dark-clr);
+	padding: 4.8rem 9.6rem;
+	color: #fff;
+
+	.footer-content,
+	a,
+	ul {
+		display: flex;
+		align-items: center;
+		gap: 1.6rem;
+	}
+
+	.footer-content {
+		justify-content: space-between;
+		padding: 0 9.6rem;
+
+		li {
+			list-style: none;
+		}
+
+		a {
+			color: currentColor;
+			font-size: 1.6rem;
+		}
+	}
+
+	p {
+		text-align: center;
+		margin-top: 2.4rem;
+		color: #ffffff7c;
+	}
+}
+
+/* ----------------------------------------- */
+/* Media */
+/* ----------------------------------------- */
+@media (max-width: 74.375rem) {
+	section#tutorial-section {
+		.tutorials {
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: 0;
+			row-gap: 1.2rem;
+			justify-items: center;
+		}
+	}
+
+	section#faq-section {
+		.faqs {
+			column-gap: 8rem;
+		}
+	}
+}
+
+@media (max-width: 65.625rem) {
+	html {
+		font-size: 56.25%;
+	}
+
+	section#quote-section {
+		.wrapper {
+			width: 70%;
+
+			.testimonial {
+				blockquote {
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 55rem) {
+	section#tutorial-section {
+		.tutorials {
+			grid-template-columns: 1fr;
+			row-gap: 1.6rem;
+		}
+	}
+
+	section#membership-section {
+		.memberships {
+			grid-template-columns: repeat(2, 1fr);
+			row-gap: 8rem;
+		}
+	}
+
+	section#faq-section {
+		.faqs {
+			width: 80%;
+			column-gap: 9.6rem;
+		}
+	}
+}
+
+@media (max-width: 40.625rem) {
+	body {
+		position: relative;
+	}
+
+	header {
+		width: 100%;
+
+		nav {
+			ul {
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: #fff;
+				width: 100%;
+				height: 100vh;
+				color: black;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				opacity: 0;
+				pointer-events: none;
+				visibility: none;
+				transition: all 0.3s ease-in-out;
+				transform: translateX(100%);
+
+				li a {
+					font-size: 2rem;
+				}
+			}
+
+			.humburg-menu {
+				display: inline-block;
+				z-index: 10;
+				color: #fff;
+			}
+
+			.cancel {
+				color: black;
+				z-index: 10;
+			}
+		}
+
+		.nav-open ul {
+			opacity: 1;
+			pointer-events: auto;
+			visibility: visible;
+			transform: translateX(0);
+		}
+	}
+
+	section#main-part {
+		h1 {
+			font-size: 6.2rem;
+		}
+
+		.pro-section {
+			.pros {
+				gap: 4.8rem;
+
+				.pro {
+					width: 80px;
+
+					.pro-text {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	section#quote-section {
+		.wrapper {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+
+	section#tutorial-section {
+		padding: 4.8rem;
+	}
+
+	section#membership-section {
+		.memberships {
+			grid-template-columns: 1fr;
+			row-gap: 8rem;
+		}
+	}
+
+	section#faq-section {
+		.faqs {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	footer {
+		padding: 4.8rem;
+
+		.footer-content {
+			justify-content: space-between;
+			padding: 0 0rem;
+		}
+	}
+}

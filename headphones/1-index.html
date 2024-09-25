@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Fontawesome cdn -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+			integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style/0-styles.css" />
+		<link rel="stylesheet" href="style/1-styles.css" />
+		<link rel="stylesheet" href="style/queries.css" />
+		<title>Holberton School</title>
+	</head>
+	<body>
+		<header class="">
+			<div class="container">
+				<a href="" class="logo">
+					<img src="./images/logo.png" alt="Logo Image" />
+				</a>
+				<nav>
+					<ul>
+						<li><a href="#what-we-do">what we do</a></li>
+						<li><a href="#dark">our results</a></li>
+						<li><a href="#contact">contact us</a></li>
+					</ul>
+				</nav>
+				<a href="" class="menu" id="triggerId"
+					><i class="fa-solid fa-bars"></i
+				></a>
+				<a href="" class="cancel"><i class="fa-solid fa-xmark"></i></a>
+			</div>
+		</header>
+
+		<main>
+			<section id="hero">
+				<div class="container">
+					<h1>Lorem ipsum dolor set amet lorem ipsum</h1>
+					<p>Lorem ipsum dolor set amet lorem ipsum dolor set</p>
+					<a href="" class="cta">call to action</a>
+					<p class="description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+						ad minim veniam, quis nostrud exercitation ullamco laboris
+					</p>
+				</div>
+			</section>
+
+			<section id="what-we-do">
+				<div class="container">
+					<h2>What we do ...</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+						aliquip ex ea commodo consequat. Duis aute irure dolor in
+						reprehenderit in voluptate velit esse cillum
+					</p>
+
+					<div class="icons">
+						<div class="card">
+							<img src="./images/sound-frecuency.png" alt="" />
+							<h4>Lorem, ipsum</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+						<div class="card">
+							<img src="./images/video.png" alt="" />
+							<h4>Lorem, ipsum</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+						<div class="card">
+							<img src="./images/music.png" alt="" />
+							<h4>Lorem, ipsum</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+						<div class="card">
+							<img src="./images/hearing.png" alt="" />
+							<h4>Lorem, ipsum</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<script>
+			document.querySelector(".menu").addEventListener("click", (e) => {
+				document.querySelector("header").classList.add("active");
+				document.body.style.overflow = "hidden";
+				e.preventDefault();
+			});
+
+			document.querySelector(".cancel").addEventListener("click", () => {
+				document.querySelector("header").classList.remove("active");
+				document.body.style.overflow = "auto";
+				e.preventDefault();
+			});
+		</script>
+	</body>
+</html>
