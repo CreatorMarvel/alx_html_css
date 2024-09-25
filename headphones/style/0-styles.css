@@ -71,7 +71,7 @@ a {
 /* Header Styles */
 /* ----------------------------------------- */
 header {
-	background-image: url("/images/background.png");
+	background-image: url("../images/background.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
